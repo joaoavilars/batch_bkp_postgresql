@@ -10,11 +10,11 @@ set BACKUP_USER=
 set HOSTNAME=localhost
 
 :: Optional username to connect to database as.  Will default to "postgres" if none specified.
-set USERNAME=softmovel
-set PGPASSWORD=A123456a
+set USERNAME=postuser
+set PGPASSWORD=My_post_pass
 :: This dir will be created if it doesn't exist.  This must be writable by the user the script is
 :: running as.
-set BACKUP_DIR=c:\SivaServer\backups
+set BACKUP_DIR=c:\backups
 
 :: List of strings to match against in database name, separated by space or comma, for which we only
 :: wish to keep a backup of the schema, not the data. Any database names which contain any of these
