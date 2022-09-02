@@ -2,16 +2,13 @@
 ::STGRESQL BACKUP CONFIG ::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:: Optional system user to run backups as.  If the user the script is running as doesn't match this
-:: the script terminates.  Leave blank to skip check.
-set BACKUP_USER=
-
 :: Optional hostname to adhere to pg_hba policies.  Will default to "localhost" if none specified.
 set HOSTNAME=localhost
 
 :: Optional username to connect to database as.  Will default to "postgres" if none specified.
 set USERNAME=postuser
 set PGPASSWORD=My_post_pass
+
 :: This dir will be created if it doesn't exist.  This must be writable by the user the script is
 :: running as.
 set BACKUP_DIR=c:\backups
@@ -26,7 +23,7 @@ set ENABLE_CUSTOM_BACKUPS="no"
 
 :: Will produce a gzipped plain-format backup if set to "yes"
 set ENABLE_PLAIN_BACKUPS="no"
-set DATABASE=siva
+set DATABASE=database_name
 set PLAIN_BACKUPS_YES=p
 
 :: Will produce gzipped sql file containing the cluster globals, like users and passwords, if set to "yes"
