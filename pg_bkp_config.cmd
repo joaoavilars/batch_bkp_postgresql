@@ -5,13 +5,17 @@
 :: Optional hostname to adhere to pg_hba policies.  Will default to "localhost" if none specified.
 set HOSTNAME=localhost
 
+set DBPORT=5432
+
 :: Optional username to connect to database as.  Will default to "postgres" if none specified.
-set USERNAME=postuser
-set PGPASSWORD=My_post_pass
+set USERDB=dblogin
+set PGPASSWORD=my_password
+
+set DATABASE=dbname
 
 :: This dir will be created if it doesn't exist.  This must be writable by the user the script is
 :: running as.
-set BACKUP_DIR=c:\backups
+set BACKUP_DIR=C:\backups
 
 :: List of strings to match against in database name, separated by space or comma, for which we only
 :: wish to keep a backup of the schema, not the data. Any database names which contain any of these
@@ -23,7 +27,7 @@ set ENABLE_CUSTOM_BACKUPS="no"
 
 :: Will produce a gzipped plain-format backup if set to "yes"
 set ENABLE_PLAIN_BACKUPS="no"
-set DATABASE=database_name
+
 set PLAIN_BACKUPS_YES=p
 
 :: Will produce gzipped sql file containing the cluster globals, like users and passwords, if set to "yes"
